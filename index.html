@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scrolling Effect</title>
+	<link rel="stylesheet" type="text/css" href="scrolling.css">
+</head>
+<body>
+	<section>
+		<div>
+			<h2 class="reveal">Angry baby girl </h2>
+			<h2 class="reveal">Damn!!so cute in my eye</h2>
+			<img src="loveit.jpeg" height="280px">
+		</div>
+	</section>
+	<section>
+		<div>
+			<h2 class="reveal">I love it when you are like that</h2>
+			<h2 class="reveal">I love your behaviour bae</h2>
+			<img src="loveyou.jpeg">
+		</div>
+	</section>
+	<section>
+		<div>
+			<h2 class="reveal">You are mad cuz of me</h2>
+			<h2 class="reveal">And I am mad cuz of u too</h2>
+			<img src="lovemore.jpeg">
+		</div>
+	</section>
+	<section>
+		<div>
+			<h2 class="reveal">We love each other and pass with love</h2>
+			<h2 class="reveal">Happy Anniversary my baby&hearts;&hearts;</h2>
+			<img src="lovetogether.jpeg">
+		</div>
+	</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js"></script>
+<script type="text/javascript">
+	const reveal=gsap.utils.toArray('.reveal');
+	reveal.forEach((text,i)=>{
+		ScrollTrigger.create({
+			trigger:text,
+			toggleClass:'active',
+			start:"top 90%",
+			end:"top 20%",
+			//markers:true
+		})
+	})
+
+	const images=gsap.utils.toArray('img');
+	images.forEach((img,i)=>{
+		ScrollTrigger.create({
+			trigger:img,
+			toggleClass:'active',
+			start:"top 90%",
+			end:"top 20%",
+			//markers:true
+		})
+	})
+</script>
+</body>
+</html>
